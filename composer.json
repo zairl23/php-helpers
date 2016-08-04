@@ -1,0 +1,21 @@
+{
+    "name": "root/php-helper",
+    "authors": [
+        {
+            "name": "zairl23",
+            "email": "756127792@qq.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.4.*"
+    },
+    "autoload": {
+    	"psr-4": {
+            "Ney\\Helpers\\": "src/Ney/Helpers"
+        }
+    },
+    "minimum-stability": "dev"
+}
