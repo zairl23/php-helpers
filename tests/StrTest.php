@@ -4,8 +4,10 @@ use Ney\Helpers\Str;
 
 class StrTest extends PHPUnit_Framework_TestCase 
 {
-	public function test_foo()
+	public function test_hide_with()
 	{
-		$this->assertEquals('bar', Str::foo());
+		
 	}
+
+
 }
