@@ -2,6 +2,6 @@
 
 use Carbon\Carbon;
 
-class Time extends Carbon {
+class Time {
 
 }
