@@ -38,5 +38,10 @@ class StrTest extends PHPUnit_Framework_TestCase
 
 	}
 
+	public function test_create_uniq_key()
+	{
+		$this->assertEquals(32, strlen(Str::create_uniq_key()));
+	}
+
 
 }
