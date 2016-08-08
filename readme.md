@@ -19,5 +19,8 @@ A variety of "helper" PHP functions which is Base on :
 
 #### Regex
 
+#### Curl
+
+
 This projects is still in active developing status!
 
