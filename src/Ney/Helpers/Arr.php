@@ -45,7 +45,7 @@ class Arr
 		return $results;
 	}
 
-	public function dataGet($target, $key, $default = null)
+	public static function dataGet($target, $key, $default = null)
 	{
 		if (is_null($key)) return $target;
 

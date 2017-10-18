@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str as IlluminateStr;
 
-class Str extends IlluminateStr 
+class Str extends IlluminateStr
 {
 	/**
 	 * Hide the string by mask strings at the end of the string
@@ -53,5 +53,47 @@ class Str extends IlluminateStr
 	{
 		return md5(microtime().rand());
 	}
+
+	/**
+	 * Check the given string is a url format
+	 *
+	 * @return boolean
+	 */
+	public static function is_url($str)
+	{
+			return preg_match("^http(s)?:\/\/.+", $str) === 1;
+	}
+
+  /**
+		* Check the given string is a blank string
+		*
+		* @return boolean
+		*/
+	public static function is_empty($str)
+	{
+		 return preg_match("^\[ \t]*$", $str) === 1;
+	}
+
+	/**
+		* Check the given string is a chinese words
+		*
+		* @return boolean
+		*/
+	// preg_match("/^[\x{4e00}-\x{9fa5}a-zA-z0-9]{1,}([\x{4e00}-\x{9fa5}a-zA-Z0-9_?%&*,;= ]){1,}$/u
+	public static function is_chinese($str)
+	{
+		 return preg_match("/^[\x{4e00}-\x{9fa5}]$/u", $str) === 1;
+	}
+
+	/**
+		* Check the given string contain chinese string
+		*
+		* @return boolean
+		*/
+	public static function contain_chinese($str)
+	{
+		 return preg_match("/[\x{4e00}-\x{9fa5}]+/u", $str) === 1;
+	}
+
 
 }

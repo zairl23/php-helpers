@@ -2,7 +2,7 @@
 
 use Ney\Helpers\Str;
 
-class StrTest extends PHPUnit_Framework_TestCase 
+class StrTest extends PHPUnit_Framework_TestCase
 {
 	public function test_hide_with_end()
 	{
@@ -41,6 +41,28 @@ class StrTest extends PHPUnit_Framework_TestCase
 	public function test_create_uniq_key()
 	{
 		$this->assertEquals(32, strlen(Str::create_uniq_key()));
+	}
+
+	public function is_empty()
+	{
+		 $this->assertTrue(Str::is_empty("\n"));
+		 $this->assertTrue(Str::is_empty("\s"));
+		 $this->assertTrue(Str::is_empty("\t"));
+	}
+
+	public function test_is_chinese()
+	{
+		 $this->assertTrue(Str::is_chinese('我'));
+		 $this->assertFalse(Str::is_chinese('test'));
+		 $this->assertFalse(Str::is_chinese('我是neo'));
+	}
+
+	public function test_contain_chinese()
+	{
+			$this->assertTrue(Str::contain_chinese('我'));
+			$this->assertFalse(Str::contain_chinese('test'));
+			$this->assertTrue(Str::contain_chinese('我是neo'));
+			$this->assertTrue(Str::contain_chinese('neo是我'));
 	}
 
 
