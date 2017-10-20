@@ -21,4 +21,14 @@ class TimeTest extends PHPUnit_Framework_TestCase {
 	//	$this->assertEquals('e', Time::now());
 	}
 
+	public function test_remain_time()
+	{
+		# code...
+	}
+
+	public function test_get_millseconds()
+	{
+		 
+	}
+
 }

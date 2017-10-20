@@ -93,4 +93,19 @@ class Time {
   	}
 
   	// http://php.net/manual/en/function.strtotime.php
+		/**
+		 * Get the remain seconds from now
+		 *
+		 * @return integer
+		 */
+		public static function remain_time($str_time)
+		{
+			 return \DateTime::createFromFormat("Y-m-d H:i:s", $str_time)->getTimestamp() - time();
+		}
+
+		public static function get_millseconds()
+		{
+				list($t1, $t2) = explode(' ', microtime());
+        return (float)sprintf('%.0f',(floatval($t1)+floatval($t2))*1000);
+		}
  }

@@ -69,9 +69,9 @@ class Str extends IlluminateStr
 		*
 		* @return boolean
 		*/
-	public static function is_empty($str)
+	public static function is_blank($str)
 	{
-		 return preg_match("^\[ \t]*$", $str) === 1;
+		 return preg_match("/^[\s]*$/", $str) === 1;
 	}
 
 	/**

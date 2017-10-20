@@ -43,11 +43,10 @@ class StrTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals(32, strlen(Str::create_uniq_key()));
 	}
 
-	public function is_empty()
+	public function test_is_blank()
 	{
-		 $this->assertTrue(Str::is_empty("\n"));
-		 $this->assertTrue(Str::is_empty("\s"));
-		 $this->assertTrue(Str::is_empty("\t"));
+		 $this->assertTrue(Str::is_blank("\n"));
+		 $this->assertTrue(Str::is_blank("\t"));
 	}
 
 	public function test_is_chinese()
