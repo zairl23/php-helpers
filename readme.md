@@ -1,7 +1,7 @@
 PHP-Helpers
 ============
 
-A variety of "helper" PHP functions which is Base on :
+Some "helper" PHP functions which is Base on :
 
 1. [Illuminate\Support](https://laravel.com/docs/5.2/helpers#method-camel-case)
 
@@ -28,6 +28,10 @@ A variety of "helper" PHP functions which is Base on :
 ##### paste
 
     Ney\Helpers\Image::from("avatar.jpg")->paste("hat.jpg", "center", 3, 5);
+
+#### RespositoryInterface
+
+    common functions for implementing the Repository Pattern
 
 
 This projects is still in active developing status!
